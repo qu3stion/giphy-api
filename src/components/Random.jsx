@@ -18,7 +18,7 @@ const fetchData = async () => {
 
     console.log(response);
 
-    const results = response.data.data.bitly_gif_url;
+    const results = response.data.data.images.downsized_large;
     console.log(results);
     setGif(results);
     console.log(gif);
@@ -29,7 +29,7 @@ const fetchData = async () => {
 
 return (
   <div>
-    <img src={gif} alt="stuff" />
+    <img src={gif.url} alt="stuff" />
     <button onClick={fetchData}>Random</button>
   </div>
  );
